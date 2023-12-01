@@ -22,4 +22,6 @@ Hello, Black Hat Gophers!
 > ```$ go build -ldflags "-w -s"```
 
 
-## Creating a 
+## Creating a TCP PROXY
+### Reader + Writer
+> Here we develop a basic Reader Writer and use it with the Copy function to move data from the source to the destination
