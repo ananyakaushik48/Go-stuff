@@ -34,9 +34,16 @@ func main() {
 	input := make([]byte, 4096)
 
 	s, err := reader.Read(input)
-	// User the reader to read input from cli
+	// Use the reader to read bytes into "input" from cli
 	if err != nil {
 		log.Fatalln("Couldnt read data")
 	}
+	fmt.Printf("Read %d bytes from stdin\n", s)
 
+	// Using the writer to write data from "input" back to the console
+	s, err = writer.Write(input)
+	if err != nil {
+		log.Fatalln("Couldnt write data")
+	}
+	fmt.Printf("Wrote %d bytes to stdout\n", s)
 }
